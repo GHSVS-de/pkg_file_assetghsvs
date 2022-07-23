@@ -70,7 +70,7 @@
 		"bootstrap"
 	],
 	"private": false,
-	"description": "A collection of asset files that I often use. Not more.",
+	"description": "Joomla package/file. A collection of asset files that I often use. Not more.",
 	"license": "GPL-3.0",
 	"repository": {
 		"type": "git",
