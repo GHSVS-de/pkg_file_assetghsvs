@@ -1,0 +1,8 @@
+{
+	"name": "file_assetghsvs",
+	"update": {
+		"type": "file",
+		"pkgId": "assetghsvs"
+	},
+	"description": "Joomla file extension. Part of Joomla package \"pkg_assetghsvs\". Contains assets I often use in folder media/assetghsvs. Not more."
+}
