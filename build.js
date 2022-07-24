@@ -26,7 +26,6 @@ let from = "";
 let to = "";
 let source = '';
 let what = '';
-let which = '';
 
 const {
 	filename,
@@ -65,8 +64,8 @@ let thisPackages = [];
 	to = `./package`;
 	await helper.copy(from, to)
 
+	// Copy different Bootstrap versions - START
 	what = 'bootstrap';
-	which = 'scss';
 	source = `node_modules/@--${what}`;
 
 	/*
@@ -76,16 +75,67 @@ let thisPackages = [];
 	await fse.readdir(source).then(
 		async function(folders)
 		{
-			console.log(folders);
+			console.log(`Found Bootstrap versions/directories: ${folders}`);
 
+			// folders: e.g. [ '4', '51', '52', 'current' ]
 			for (const folder of folders)
 			{
-				from = path.join(source, folder, `scss`);
-				to = path.join(childDir, which, what, folder);
+				let currentPackage = '';
+
+				if (folder === 'current')
+				{
+					currentPackage = path.join(source, folder, 'package.json');
+				}
+
+				from = path.join(source, folder, 'scss');
+				to = path.join(childDir, 'scss', what, folder);
 				await helper.copy(from, to)
+
+				if (currentPackage)
+				{
+					await helper.copy(currentPackage, path.join(to, 'package.json'));
+				}
+
+
+				// dist-Kram
+				for (const whichfolder of ['js', 'css'])
+				{
+					from = path.join(source, folder, 'dist', whichfolder);
+					to = path.join(childDir, whichfolder, what, folder);
+					await helper.copy(from, to);
+
+					if (currentPackage)
+					{
+						await helper.copy(currentPackage, path.join(to, 'package.json'));
+					}
+				}
+
+				// plugins are in js/dist.
+				from = path.join(source, folder, 'js/dist');
+				to = path.join(childDir, 'js', what, folder, 'plugins');
+				await helper.copy(from, to);
 			}
 		}
 	);
+	// Copy different Bootstrap versions - START
+
+	// #### JQuery.
+	from = `./node_modules/jquery/dist`;
+	to = `${childDir}/js/jquery/current`;
+	await helper.copy(from, to);
+
+	from = `./node_modules/jquery/package.json`;
+	to = `${childDir}/js/jquery/current/package.json`;
+	await helper.copy(from, to);
+
+	// #### JQuery-migrate.
+	from = `./node_modules/jquery-migrate/dist`;
+	to = `${childDir}/js/jquery-migrate/current`;
+	await helper.copy(from, to);
+
+	from = `./node_modules/jquery-migrate/package.json`;
+	to = `${childDir}/js/jquery-migrate/current/package.json`;
+	await helper.copy(from, to);
 
 	await helper.mkdir('./dist');
 

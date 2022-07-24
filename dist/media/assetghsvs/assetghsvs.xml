@@ -6,11 +6,13 @@
 	<copyright>(C) 2022, G@HService Berlin Neukölln, Volkmar Volli Schlothauer.</copyright>
 	<license>GNU General Public License version 3 or later; see LICENSE.txt.</license>
 	<authorUrl>https://ghsvs.de</authorUrl>
-	<version>2022.07.23</version>
+	<version>2022.07.24</version>
 	<description>Joomla file extension. Part of Joomla package "pkg_assetghsvs". Contains assets I often use in folder media/assetghsvs. Not more.</description>
 
 	<fileset>
 		<files target="media/assetghsvs">
+			<folder>css</folder>
+			<folder>js</folder>
 			<folder>scss</folder>
 		</files>
 	</fileset>

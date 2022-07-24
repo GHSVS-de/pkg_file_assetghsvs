@@ -11,6 +11,8 @@
 
 	<fileset>
 		<files target="media/assetghsvs">
+			<folder>css</folder>
+			<folder>js</folder>
 			<folder>scss</folder>
 		</files>
 	</fileset>
