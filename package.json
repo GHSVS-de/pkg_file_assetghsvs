@@ -26,7 +26,9 @@
 		"title": "Joomla package/file AssetGhsvs",
 		"requires": [],
 		"uses": [
-			"https://github.com/twbs/bootstrap"
+			"https://github.com/twbs/bootstrap",
+			"https://github.com/jquery/jquery",
+			"https://github.com/jquery/jquery-migrate"
 		],
 		"language": []
 	},
