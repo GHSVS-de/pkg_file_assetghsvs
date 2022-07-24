@@ -51,7 +51,7 @@ let thisPackages = [];
 (async function exec()
 {
 	// This is for SCSS compilation for tpl_bs4ghsvs. /git-kram/media/,
-	const externalScssFolder = path.join(__dirname, '../', 'media', filename, 'scss');
+	const externalScssFolder = path.join(__dirname, '../', 'media', filename);
 
 	let cleanOuts = [
 		`./package`,
@@ -183,7 +183,7 @@ let thisPackages = [];
 	)
 
 	// This is for SCSS compilation for tpl_bs4ghsvs. /git-kram/media/.
-	from = `dist/media/assetghsvs/scss`;
+	from = `dist/media/assetghsvs`;
 	to = externalScssFolder;
 	await helper.copy(from, to);
 
