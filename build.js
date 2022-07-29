@@ -48,6 +48,9 @@ const jsonChild = `${childDir}/packageOverride.json`;
 
 let thisPackages = [];
 
+// Just an info file in each folder.
+const versionInfo = `packageInfo.json`;
+
 (async function exec()
 {
 	// This is for SCSS compilation for tpl_bs4ghsvs. /git-kram/media/,
@@ -82,7 +85,7 @@ let thisPackages = [];
 			{
 				let currentPackage = '';
 
-				if (folder === 'current')
+				//if (folder === 'current')
 				{
 					currentPackage = path.join(source, folder, 'package.json');
 				}
@@ -93,9 +96,8 @@ let thisPackages = [];
 
 				if (currentPackage)
 				{
-					await helper.copy(currentPackage, path.join(to, 'package.json'));
+					await helper.copy(currentPackage, path.join(to, versionInfo));
 				}
-
 
 				// dist-Kram
 				for (const whichfolder of ['js', 'css'])
@@ -106,7 +108,7 @@ let thisPackages = [];
 
 					if (currentPackage)
 					{
-						await helper.copy(currentPackage, path.join(to, 'package.json'));
+						await helper.copy(currentPackage, path.join(to, versionInfo));
 					}
 				}
 
@@ -125,7 +127,7 @@ let thisPackages = [];
 	await helper.copy(from, to);
 
 	from = `./node_modules/jquery/package.json`;
-	to = `${childDir}/js/jquery/current/package.json`;
+	to = `${childDir}/js/jquery/current/${versionInfo}`;
 	await helper.copy(from, to);
 
 	// #### JQuery-migrate.
@@ -134,7 +136,7 @@ let thisPackages = [];
 	await helper.copy(from, to);
 
 	from = `./node_modules/jquery-migrate/package.json`;
-	to = `${childDir}/js/jquery-migrate/current/package.json`;
+	to = `${childDir}/js/jquery-migrate/current/${versionInfo}`;
 	await helper.copy(from, to);
 
 	await helper.mkdir('./dist');
