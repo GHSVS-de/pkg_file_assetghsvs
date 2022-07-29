@@ -16,7 +16,13 @@ class pkg_assetghsvsInstallerScript extends InstallerScript
 	 * @var    array
 	 * @since  2.0
 	 */
-	protected $deleteFiles = [];
+	protected $deleteFiles = [
+'/media/assetghsvs/css/bootstrap/current/package.json',
+'/media/assetghsvs/js/bootstrap/current/package.json',
+'/media/assetghsvs/js/jquery-migrate/current/package.json',
+'/media/assetghsvs/js/jquery/current/package.json',
+'/media/assetghsvs/scss/bootstrap/current/package.json',
+	];
 
 	/**
 	 * A list of folders to be deleted with method removeFiles().
