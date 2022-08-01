@@ -139,6 +139,9 @@ const versionInfo = `packageInfo.json`;
 	to = `${childDir}/js/jquery-migrate/current/${versionInfo}`;
 	await helper.copy(from, to);
 
+	// Create *.gz of min.css and min.js files.
+	await helper.gzip([childDir]);
+
 	await helper.mkdir('./dist');
 
 	// ##### The File(s) (child). START.
@@ -178,7 +181,7 @@ const versionInfo = `packageInfo.json`;
 		`<file type="${tempPackage.update.type}" id="${tempPackage.update.pkgId}">${zipFilename}</file>`
 	);
 
-	// For myself. So that I have files at hand even without unzipping them.
+	// Just a reference for myself. So that I have files at hand even without unzipping them.
 	await helper.copy(
 		childDir,
 		`dist/media/assetghsvs`
