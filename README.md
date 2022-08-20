@@ -7,7 +7,7 @@ DE: See https://ghsvs.de/programmierer-schnipsel/sonstige/352-npm-mehrere-versio
 - `cd /mnt/z/git-kram/pkg_file_assetghsvs`
 
 
-## New Bootstrap release? Special step (1)!!!!! Build reduced `bootstrap.bundle` JS!!!!!!
+## New Bootstrap 5 release? Special step (1)!!!!! Build reduced `bootstrap.bundle` JS!!!!!!
 
 - Delete everything in `/mnt/z/git-kram/bootstrap/`
   - but don't delete `./.git`!
