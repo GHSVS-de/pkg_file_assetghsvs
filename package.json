@@ -2,8 +2,8 @@
 	"name": "pkg_assetghsvs",
 	"nameReal": "pkg_file_assetghsvs",
 	"filename": "assetghsvs",
-	"version": "2022.08.01",
-	"versionCompare": "2022.07.24",
+	"version": "2022.08.20",
+	"versionCompare": "2022.08.01",
 	"update": {
 		"type": "package",
 		"folder": "",
@@ -43,7 +43,8 @@
 			"PHP 8.1",
 			"PHP 7.4",
 			"Joomla 3.10",
-			"Joomla 4.1"
+			"Joomla 4.1",
+			"Joomla 4.2"
 		]
 	},
 	"minimumPhp": "7.4.0",
@@ -84,6 +85,8 @@
 		"@--bootstrap/52": "npm:bootstrap@~5.2",
 		"@--bootstrap/51": "npm:bootstrap@~5.1",
 		"@--bootstrap/4": "npm:bootstrap@^4",
+		"@--bootstrap-sass/3-latest": "npm:bootstrap-sass@^3",
+		"@--bootstrap-sass/33": "npm:bootstrap-sass@~3.3",
 		"jquery": "^3",
 		"jquery-migrate": "^3.4.0",
 		"@popperjs/core": "^2.11.5"

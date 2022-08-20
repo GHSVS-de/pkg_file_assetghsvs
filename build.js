@@ -121,6 +121,56 @@ const versionInfo = `packageInfo.json`;
 	);
 	// Copy different Bootstrap versions - START
 
+	// Copy Bootstrap 3 SASS versions - START
+	// Das sind ehemals BS-3-LESS-Versionen, die es auch als SCSS gibt.
+	// Die Ordnerstruktur ist abweichend und es liegt kein CSS bei.
+	what = 'bootstrap-sass';
+	source = `node_modules/@--${what}`;
+	target = 'bootstrap';
+
+	/*
+	An extremely confusing construct so that I can use await helper.copy.
+	This doesn't seem to work at all with forEach.
+	*/
+	await fse.readdir(source).then(
+		async function(folders)
+		{
+			console.log(`Found Bootstrap-sass versions/directories: ${folders}`);
+
+			// folders: e.g. [ '33', '3-latest' ]
+			for (const folder of folders)
+			{
+				let currentPackage = '';
+
+				//if (folder === 'current')
+				{
+					currentPackage = path.join(source, folder, 'package.json');
+				}
+
+				from = path.join(source, folder, 'assets/stylesheets');
+				to = path.join(childDir, 'scss', target, folder);
+				await helper.copy(from, to)
+
+				if (currentPackage)
+				{
+					await helper.copy(currentPackage, path.join(to, versionInfo));
+				}
+
+				from = path.join(source, folder, 'assets/javascripts');
+				to = path.join(childDir, 'js', target, folder);
+				await helper.copy(from, to);
+				await helper.copy(currentPackage, path.join(to, versionInfo));
+
+				// Fonts plump ohne Versionsangabe in Unterordnern, da sowieso immer die selben.
+				// Auch egal, dass mehrfach der selbe kopiert wird = drüberbügeln.
+				from = path.join(source, folder, 'assets/fonts');
+				to = path.join(childDir, 'fonts');
+				await helper.copy(from, to);
+			}
+		}
+	);
+	// Copy Bootstrap 3 SASS versions - END
+
 	// #### JQuery.
 	from = `./node_modules/jquery/dist`;
 	to = `${childDir}/js/jquery/current`;
