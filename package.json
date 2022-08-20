@@ -28,7 +28,8 @@
 		"uses": [
 			"https://github.com/twbs/bootstrap",
 			"https://github.com/jquery/jquery",
-			"https://github.com/jquery/jquery-migrate"
+			"https://github.com/jquery/jquery-migrate",
+			"https://github.com/twbs/bootstrap-sass"
 		],
 		"language": []
 	},
