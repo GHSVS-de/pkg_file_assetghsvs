@@ -19,7 +19,9 @@ let replaceXmlOptions = {
 	"zipFilename": '',
 	"checksum": '',
 	"dirname": __dirname,
-	"jsonString": ''
+	"jsonString": '',
+	"versionSub": "",
+	"additionalInfos": [],
 };
 let zipOptions = {};
 let from = "";
@@ -78,7 +80,7 @@ const versionInfo = `packageInfo.json`;
 	await fse.readdir(source).then(
 		async function(folders)
 		{
-			console.log(`Found Bootstrap versions/directories: ${folders}`);
+			console.log(`Found ${what} versions/directories: ${folders}`);
 
 			// folders: e.g. [ '4', '51', '52', 'current' ]
 			for (const folder of folders)
@@ -188,6 +190,97 @@ const versionInfo = `packageInfo.json`;
 	from = `./node_modules/jquery-migrate/package.json`;
 	to = `${childDir}/js/jquery-migrate/current/${versionInfo}`;
 	await helper.copy(from, to);
+
+	// Copy different dropzone versions - START
+	/*
+		Ältere Versionen haben einen Ordner dist/min.
+		Bei neueren liegen die min aber direkt im dist/.
+	*/
+	what = 'dropzone';
+	source = `node_modules/@--${what}`;
+
+	/*
+	An extremely confusing construct so that I can use await helper.copy.
+	This doesn't seem to work at all with forEach.
+	*/
+	await fse.readdir(source).then(
+		async function(folders)
+		{
+			console.log(`Found ${what} versions/directories: ${folders}`);
+
+			// folders: e.g. [ '5', 'current' ]
+			for (const folder of folders)
+			{
+				let currentPackage = '';
+
+				//if (folder === 'current')
+				{
+					currentPackage = path.join(source, folder, 'package.json');
+				}
+
+				let fromFolder = path.join(source, folder, 'dist');
+
+				// Copy files of type...
+				for (const whichType of ['js', 'css'])
+				{
+					let targetFolder = path.join(childDir, whichType, what, folder);
+
+					let dateien = await helper.getFilesRecursive(
+						fromFolder,
+						`\.${whichType}$`
+					);
+
+					for (let thisFile of dateien)
+					{
+						from = thisFile;
+
+						// Strange file name
+						let Basename = path.basename(thisFile);
+
+						if (Basename === `dropzone-min.js`)
+						{
+							thisFile = `dropzone.min.js`;
+						}
+
+						to = path.join(targetFolder, path.basename(thisFile));
+						console.log(`to ${to} `);
+						await helper.copy(from, to);
+					}
+
+					if (currentPackage)
+					{
+						await helper.copy(currentPackage, path.join(targetFolder, versionInfo));
+					}
+				}
+			}
+		}
+	);
+	// Copy different dropzone versions - END
+
+	// Collect contained asset versions - START
+	await helper.getFilesRecursive(childDir,`${versionInfo}$`).then(
+		async function(versionInfoFiles)
+		{
+			if (versionInfoFiles.length)
+			{
+				replaceXmlOptions.additionalInfos.push('#### Package contains')
+			}
+
+			for (const versionInfoFile of versionInfoFiles)
+			{
+				const {
+					name,
+					version,
+					description
+				} = require(`./${versionInfoFile}`);
+
+				replaceXmlOptions.additionalInfos.push(`- ${name} v${version} ("${description}")`)
+			}
+		}
+	)
+
+	replaceXmlOptions.additionalInfos = [...new Set(replaceXmlOptions.additionalInfos)].sort()
+	// Collect contained asset versions - END
 
 	// Create *.gz of min.css and min.js files.
 	await helper.gzip([childDir]);
