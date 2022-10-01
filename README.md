@@ -1,5 +1,6 @@
-# assetghsvs
-A collection of SCSS files of different Bootstrap versions. Not any more.
+# PKG_FILE_ASSETGHSVS
+
+Joomla file package. Different versions of asset files that I often need. For example, Bootstrap, JQuery, JQuery-Slim. The assets are stored in Joomla folder `/media/assetghsvs/`. Not more.
 
 DE: See https://ghsvs.de/programmierer-schnipsel/sonstige/352-npm-mehrere-versionen-des-selben-pakets-in-node-modules
 
