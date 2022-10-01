@@ -2,8 +2,8 @@
 	"name": "pkg_assetghsvs",
 	"nameReal": "pkg_file_assetghsvs",
 	"filename": "assetghsvs",
-	"version": "2022.08.26",
-	"versionCompare": "2022.08.20",
+	"version": "2022.09.30",
+	"versionCompare": "2022.08.26",
 	"update": {
 		"type": "package",
 		"folder": "",
@@ -29,7 +29,8 @@
 			"https://github.com/twbs/bootstrap",
 			"https://github.com/jquery/jquery",
 			"https://github.com/jquery/jquery-migrate",
-			"https://github.com/twbs/bootstrap-sass"
+			"https://github.com/twbs/bootstrap-sass",
+			"https://github.com/dropzone/dropzone"
 		],
 		"language": []
 	},
@@ -44,7 +45,6 @@
 			"PHP 8.1",
 			"PHP 7.4",
 			"Joomla 3.10",
-			"Joomla 4.1",
 			"Joomla 4.2"
 		]
 	},
@@ -70,7 +70,7 @@
 	"homepage": "https://github.com/GHSVS-de/pkg_file_assetghsvs#readme",
 	"keywords": [],
 	"private": false,
-	"description": "Joomla package/file. A collection of asset files that I often use. Not more.",
+	"description": "Joomla file package. Different versions of asset files that I often need. For example, Bootstrap, JQuery, JQuery-Slim. The assets are stored in Joomla folder `/media/assetghsvs/. Not more.",
 	"license": "GPL-3.0",
 	"repository": {
 		"type": "git",
@@ -88,6 +88,8 @@
 		"@--bootstrap/4": "npm:bootstrap@^4",
 		"@--bootstrap-sass/3-latest": "npm:bootstrap-sass@^3",
 		"@--bootstrap-sass/33": "npm:bootstrap-sass@~3.3",
+		"@--dropzone/5": "npm:dropzone@^5",
+		"@--dropzone/current": "npm:dropzone@*",
 		"jquery": "^3",
 		"jquery-migrate": "^3.4.0",
 		"@popperjs/core": "^2.11.5"
