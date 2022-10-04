@@ -239,11 +239,10 @@ const versionInfo = `packageInfo.json`;
 
 						if (Basename === `dropzone-min.js`)
 						{
-							thisFile = `dropzone.min.js`;
+							Basename = `dropzone.min.js`;
 						}
 
-						to = path.join(targetFolder, path.basename(thisFile));
-						console.log(`to ${to} `);
+						to = path.join(targetFolder, Basename);
 						await helper.copy(from, to);
 					}
 
