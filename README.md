@@ -4,10 +4,6 @@ Joomla file package. Different versions of asset files that I often need. For ex
 
 DE: See https://ghsvs.de/programmierer-schnipsel/sonstige/352-npm-mehrere-versionen-des-selben-pakets-in-node-modules
 
-- Prepare/adapt `./package.json`.
-- `cd /mnt/z/git-kram/pkg_file_assetghsvs`
-
-
 ## New Bootstrap 5 release? Special step (1)!!!!! Build reduced `bootstrap.bundle` JS!!!!!!
 
 - Delete everything in `/mnt/z/git-kram/bootstrap/`
@@ -32,7 +28,7 @@ import Button from './src/button'
 import Collapse from './src/collapse'
 import Dropdown from './src/dropdown'
 import Modal from './src/modal'
-// import Offcanvas from './src/offcanvas'
+import Offcanvas from './src/offcanvas'
 // import Popover from './src/popover'
 // import ScrollSpy from './src/scrollspy'
 // import Tab from './src/tab'
@@ -46,7 +42,7 @@ export default {
   Collapse,
   Dropdown,
   Modal,
-  // Offcanvas,
+  Offcanvas,
   // Popover,
   // ScrollSpy,
   // Tab,
@@ -58,12 +54,18 @@ export default {
 - Compile: `npm run js`
 
 ### !!!Don't forget then!!!
-- Craete new folder `git-kram/bootstrap/dist/js/_ghsvsBootstrapBundleVersion_`.
-- Copy `git-kram/bootstrap/js/index.umd.js` in this new folder.
-- Copy from `git-kram/bootstrap/dist/js` to `src\packages\file_assetghsvs\js\bootstrap\xy\-_custom_-`
-- `xy` is the BS version.
+- `mkdir _ghsvsBootstrapBundleVersion_`.
+- `cp js/index.umd.js _ghsvsBootstrapBundleVersion_`
+- Copy following from `git-kram/bootstrap/dist/js` to `src\packages\file_assetghsvs\js\bootstrap\xy\-_custom_-` (`xy` is the BS version).
   - `/_ghsvsBootstrapBundleVersion_/` (I don't know if still needed in `tpl_bs4ghsvs` but good as reference what is included in bundle.js).
   - `bootstrap.bundle.js`
   - `bootstrap.bundle.js.map`
   - `bootstrap.bundle.min.js`
   - `bootstrap.bundle.min.js.map`
+
+## Build package
+- Prepare/adapt `./package.json`.
+- `cd /mnt/z/git-kram/pkg_file_assetghsvs`
+- `npm run updateCheck`
+- `npm run update`
+- `node build`
