@@ -1,5 +1,5 @@
 /*!
-  * Bootstrap v5.2.0 (https://getbootstrap.com/)
+  * Bootstrap v5.2.2 (https://getbootstrap.com/)
   * Copyright 2011-2022 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -11,7 +11,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): util/index.js
+   * Bootstrap (v5.2.2): util/index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -290,7 +290,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): dom/event-handler.js
+   * Bootstrap (v5.2.2): dom/event-handler.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -559,7 +559,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): dom/data.js
+   * Bootstrap (v5.2.2): dom/data.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -611,7 +611,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): dom/manipulator.js
+   * Bootstrap (v5.2.2): dom/manipulator.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -681,7 +681,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): util/config.js
+   * Bootstrap (v5.2.2): util/config.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -742,7 +742,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): base-component.js
+   * Bootstrap (v5.2.2): base-component.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -750,7 +750,7 @@
    * Constants
    */
 
-  const VERSION = '5.2.0';
+  const VERSION = '5.2.2';
   /**
    * Class definition
    */
@@ -821,7 +821,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): util/component-functions.js
+   * Bootstrap (v5.2.2): util/component-functions.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -847,7 +847,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): alert.js
+   * Bootstrap (v5.2.2): alert.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -855,13 +855,13 @@
    * Constants
    */
 
-  const NAME$7 = 'alert';
-  const DATA_KEY$6 = 'bs.alert';
-  const EVENT_KEY$6 = `.${DATA_KEY$6}`;
-  const EVENT_CLOSE = `close${EVENT_KEY$6}`;
-  const EVENT_CLOSED = `closed${EVENT_KEY$6}`;
+  const NAME$8 = 'alert';
+  const DATA_KEY$7 = 'bs.alert';
+  const EVENT_KEY$7 = `.${DATA_KEY$7}`;
+  const EVENT_CLOSE = `close${EVENT_KEY$7}`;
+  const EVENT_CLOSED = `closed${EVENT_KEY$7}`;
   const CLASS_NAME_FADE$3 = 'fade';
-  const CLASS_NAME_SHOW$5 = 'show';
+  const CLASS_NAME_SHOW$6 = 'show';
   /**
    * Class definition
    */
@@ -869,7 +869,7 @@
   class Alert extends BaseComponent {
     // Getters
     static get NAME() {
-      return NAME$7;
+      return NAME$8;
     } // Public
 
 
@@ -880,7 +880,7 @@
         return;
       }
 
-      this._element.classList.remove(CLASS_NAME_SHOW$5);
+      this._element.classList.remove(CLASS_NAME_SHOW$6);
 
       const isAnimated = this._element.classList.contains(CLASS_NAME_FADE$3);
 
@@ -927,7 +927,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): button.js
+   * Bootstrap (v5.2.2): button.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -935,13 +935,13 @@
    * Constants
    */
 
-  const NAME$6 = 'button';
-  const DATA_KEY$5 = 'bs.button';
-  const EVENT_KEY$5 = `.${DATA_KEY$5}`;
-  const DATA_API_KEY$3 = '.data-api';
+  const NAME$7 = 'button';
+  const DATA_KEY$6 = 'bs.button';
+  const EVENT_KEY$6 = `.${DATA_KEY$6}`;
+  const DATA_API_KEY$4 = '.data-api';
   const CLASS_NAME_ACTIVE = 'active';
-  const SELECTOR_DATA_TOGGLE$3 = '[data-bs-toggle="button"]';
-  const EVENT_CLICK_DATA_API$3 = `click${EVENT_KEY$5}${DATA_API_KEY$3}`;
+  const SELECTOR_DATA_TOGGLE$4 = '[data-bs-toggle="button"]';
+  const EVENT_CLICK_DATA_API$4 = `click${EVENT_KEY$6}${DATA_API_KEY$4}`;
   /**
    * Class definition
    */
@@ -949,7 +949,7 @@
   class Button extends BaseComponent {
     // Getters
     static get NAME() {
-      return NAME$6;
+      return NAME$7;
     } // Public
 
 
@@ -975,9 +975,9 @@
    */
 
 
-  EventHandler.on(document, EVENT_CLICK_DATA_API$3, SELECTOR_DATA_TOGGLE$3, event => {
+  EventHandler.on(document, EVENT_CLICK_DATA_API$4, SELECTOR_DATA_TOGGLE$4, event => {
     event.preventDefault();
-    const button = event.target.closest(SELECTOR_DATA_TOGGLE$3);
+    const button = event.target.closest(SELECTOR_DATA_TOGGLE$4);
     const data = Button.getOrCreateInstance(button);
     data.toggle();
   });
@@ -989,7 +989,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): dom/selector-engine.js
+   * Bootstrap (v5.2.2): dom/selector-engine.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -1060,7 +1060,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): collapse.js
+   * Bootstrap (v5.2.2): collapse.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -1068,16 +1068,16 @@
    * Constants
    */
 
-  const NAME$5 = 'collapse';
-  const DATA_KEY$4 = 'bs.collapse';
-  const EVENT_KEY$4 = `.${DATA_KEY$4}`;
-  const DATA_API_KEY$2 = '.data-api';
-  const EVENT_SHOW$3 = `show${EVENT_KEY$4}`;
-  const EVENT_SHOWN$3 = `shown${EVENT_KEY$4}`;
-  const EVENT_HIDE$3 = `hide${EVENT_KEY$4}`;
-  const EVENT_HIDDEN$3 = `hidden${EVENT_KEY$4}`;
-  const EVENT_CLICK_DATA_API$2 = `click${EVENT_KEY$4}${DATA_API_KEY$2}`;
-  const CLASS_NAME_SHOW$4 = 'show';
+  const NAME$6 = 'collapse';
+  const DATA_KEY$5 = 'bs.collapse';
+  const EVENT_KEY$5 = `.${DATA_KEY$5}`;
+  const DATA_API_KEY$3 = '.data-api';
+  const EVENT_SHOW$4 = `show${EVENT_KEY$5}`;
+  const EVENT_SHOWN$4 = `shown${EVENT_KEY$5}`;
+  const EVENT_HIDE$4 = `hide${EVENT_KEY$5}`;
+  const EVENT_HIDDEN$4 = `hidden${EVENT_KEY$5}`;
+  const EVENT_CLICK_DATA_API$3 = `click${EVENT_KEY$5}${DATA_API_KEY$3}`;
+  const CLASS_NAME_SHOW$5 = 'show';
   const CLASS_NAME_COLLAPSE = 'collapse';
   const CLASS_NAME_COLLAPSING = 'collapsing';
   const CLASS_NAME_COLLAPSED = 'collapsed';
@@ -1086,12 +1086,12 @@
   const WIDTH = 'width';
   const HEIGHT = 'height';
   const SELECTOR_ACTIVES = '.collapse.show, .collapse.collapsing';
-  const SELECTOR_DATA_TOGGLE$2 = '[data-bs-toggle="collapse"]';
-  const Default$5 = {
+  const SELECTOR_DATA_TOGGLE$3 = '[data-bs-toggle="collapse"]';
+  const Default$6 = {
     parent: null,
     toggle: true
   };
-  const DefaultType$5 = {
+  const DefaultType$6 = {
     parent: '(null|element)',
     toggle: 'boolean'
   };
@@ -1104,7 +1104,7 @@
       super(element, config);
       this._isTransitioning = false;
       this._triggerArray = [];
-      const toggleList = SelectorEngine.find(SELECTOR_DATA_TOGGLE$2);
+      const toggleList = SelectorEngine.find(SELECTOR_DATA_TOGGLE$3);
 
       for (const elem of toggleList) {
         const selector = getSelectorFromElement(elem);
@@ -1128,15 +1128,15 @@
 
 
     static get Default() {
-      return Default$5;
+      return Default$6;
     }
 
     static get DefaultType() {
-      return DefaultType$5;
+      return DefaultType$6;
     }
 
     static get NAME() {
-      return NAME$5;
+      return NAME$6;
     } // Public
 
 
@@ -1165,7 +1165,7 @@
         return;
       }
 
-      const startEvent = EventHandler.trigger(this._element, EVENT_SHOW$3);
+      const startEvent = EventHandler.trigger(this._element, EVENT_SHOW$4);
 
       if (startEvent.defaultPrevented) {
         return;
@@ -1192,10 +1192,10 @@
 
         this._element.classList.remove(CLASS_NAME_COLLAPSING);
 
-        this._element.classList.add(CLASS_NAME_COLLAPSE, CLASS_NAME_SHOW$4);
+        this._element.classList.add(CLASS_NAME_COLLAPSE, CLASS_NAME_SHOW$5);
 
         this._element.style[dimension] = '';
-        EventHandler.trigger(this._element, EVENT_SHOWN$3);
+        EventHandler.trigger(this._element, EVENT_SHOWN$4);
       };
 
       const capitalizedDimension = dimension[0].toUpperCase() + dimension.slice(1);
@@ -1211,7 +1211,7 @@
         return;
       }
 
-      const startEvent = EventHandler.trigger(this._element, EVENT_HIDE$3);
+      const startEvent = EventHandler.trigger(this._element, EVENT_HIDE$4);
 
       if (startEvent.defaultPrevented) {
         return;
@@ -1224,7 +1224,7 @@
 
       this._element.classList.add(CLASS_NAME_COLLAPSING);
 
-      this._element.classList.remove(CLASS_NAME_COLLAPSE, CLASS_NAME_SHOW$4);
+      this._element.classList.remove(CLASS_NAME_COLLAPSE, CLASS_NAME_SHOW$5);
 
       for (const trigger of this._triggerArray) {
         const element = getElementFromSelector(trigger);
@@ -1243,7 +1243,7 @@
 
         this._element.classList.add(CLASS_NAME_COLLAPSE);
 
-        EventHandler.trigger(this._element, EVENT_HIDDEN$3);
+        EventHandler.trigger(this._element, EVENT_HIDDEN$4);
       };
 
       this._element.style[dimension] = '';
@@ -1252,7 +1252,7 @@
     }
 
     _isShown(element = this._element) {
-      return element.classList.contains(CLASS_NAME_SHOW$4);
+      return element.classList.contains(CLASS_NAME_SHOW$5);
     } // Private
 
 
@@ -1272,7 +1272,7 @@
         return;
       }
 
-      const children = this._getFirstLevelChildren(SELECTOR_DATA_TOGGLE$2);
+      const children = this._getFirstLevelChildren(SELECTOR_DATA_TOGGLE$3);
 
       for (const element of children) {
         const selected = getElementFromSelector(element);
@@ -1327,7 +1327,7 @@
    */
 
 
-  EventHandler.on(document, EVENT_CLICK_DATA_API$2, SELECTOR_DATA_TOGGLE$2, function (event) {
+  EventHandler.on(document, EVENT_CLICK_DATA_API$3, SELECTOR_DATA_TOGGLE$3, function (event) {
     // preventDefault only for <a> elements (which change the URL) not inside the collapsible element
     if (event.target.tagName === 'A' || event.delegateTarget && event.delegateTarget.tagName === 'A') {
       event.preventDefault();
@@ -1508,38 +1508,57 @@
   var min = Math.min;
   var round = Math.round;
 
-  function getBoundingClientRect(element, includeScale) {
+  function getUAString() {
+    var uaData = navigator.userAgentData;
+
+    if (uaData != null && uaData.brands) {
+      return uaData.brands.map(function (item) {
+        return item.brand + "/" + item.version;
+      }).join(' ');
+    }
+
+    return navigator.userAgent;
+  }
+
+  function isLayoutViewport() {
+    return !/^((?!chrome|android).)*safari/i.test(getUAString());
+  }
+
+  function getBoundingClientRect(element, includeScale, isFixedStrategy) {
     if (includeScale === void 0) {
       includeScale = false;
     }
 
-    var rect = element.getBoundingClientRect();
+    if (isFixedStrategy === void 0) {
+      isFixedStrategy = false;
+    }
+
+    var clientRect = element.getBoundingClientRect();
     var scaleX = 1;
     var scaleY = 1;
 
-    if (isHTMLElement(element) && includeScale) {
-      var offsetHeight = element.offsetHeight;
-      var offsetWidth = element.offsetWidth; // Do not attempt to divide by 0, otherwise we get `Infinity` as scale
-      // Fallback to 1 in case both values are `0`
-
-      if (offsetWidth > 0) {
-        scaleX = round(rect.width) / offsetWidth || 1;
-      }
-
-      if (offsetHeight > 0) {
-        scaleY = round(rect.height) / offsetHeight || 1;
-      }
+    if (includeScale && isHTMLElement(element)) {
+      scaleX = element.offsetWidth > 0 ? round(clientRect.width) / element.offsetWidth || 1 : 1;
+      scaleY = element.offsetHeight > 0 ? round(clientRect.height) / element.offsetHeight || 1 : 1;
     }
 
+    var _ref = isElement(element) ? getWindow(element) : window,
+        visualViewport = _ref.visualViewport;
+
+    var addVisualOffsets = !isLayoutViewport() && isFixedStrategy;
+    var x = (clientRect.left + (addVisualOffsets && visualViewport ? visualViewport.offsetLeft : 0)) / scaleX;
+    var y = (clientRect.top + (addVisualOffsets && visualViewport ? visualViewport.offsetTop : 0)) / scaleY;
+    var width = clientRect.width / scaleX;
+    var height = clientRect.height / scaleY;
     return {
-      width: rect.width / scaleX,
-      height: rect.height / scaleY,
-      top: rect.top / scaleY,
-      right: rect.right / scaleX,
-      bottom: rect.bottom / scaleY,
-      left: rect.left / scaleX,
-      x: rect.left / scaleX,
-      y: rect.top / scaleY
+      width: width,
+      height: height,
+      top: y,
+      right: x + width,
+      bottom: y + height,
+      left: x,
+      x: x,
+      y: y
     };
   }
 
@@ -1634,8 +1653,8 @@
 
 
   function getContainingBlock(element) {
-    var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') !== -1;
-    var isIE = navigator.userAgent.indexOf('Trident') !== -1;
+    var isFirefox = /firefox/i.test(getUAString());
+    var isIE = /Trident/i.test(getUAString());
 
     if (isIE && isHTMLElement(element)) {
       // In IE 9, 10 and 11 fixed elements containing block is always established by the viewport
@@ -2056,31 +2075,21 @@
     return getBoundingClientRect(getDocumentElement(element)).left + getWindowScroll(element).scrollLeft;
   }
 
-  function getViewportRect(element) {
+  function getViewportRect(element, strategy) {
     var win = getWindow(element);
     var html = getDocumentElement(element);
     var visualViewport = win.visualViewport;
     var width = html.clientWidth;
     var height = html.clientHeight;
     var x = 0;
-    var y = 0; // NB: This isn't supported on iOS <= 12. If the keyboard is open, the popper
-    // can be obscured underneath it.
-    // Also, `html.clientHeight` adds the bottom bar height in Safari iOS, even
-    // if it isn't open, so if this isn't available, the popper will be detected
-    // to overflow the bottom of the screen too early.
+    var y = 0;
 
     if (visualViewport) {
       width = visualViewport.width;
-      height = visualViewport.height; // Uses Layout Viewport (like Chrome; Safari does not currently)
-      // In Chrome, it returns a value very close to 0 (+/-) but contains rounding
-      // errors due to floating point numbers, so we need to check precision.
-      // Safari returns a number <= 0, usually < -1 when pinch-zoomed
-      // Feature detection fails in mobile emulation mode in Chrome.
-      // Math.abs(win.innerWidth / visualViewport.scale - visualViewport.width) <
-      // 0.001
-      // Fallback here: "Not Safari" userAgent
+      height = visualViewport.height;
+      var layoutViewport = isLayoutViewport();
 
-      if (!/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+      if (layoutViewport || !layoutViewport && strategy === 'fixed') {
         x = visualViewport.offsetLeft;
         y = visualViewport.offsetTop;
       }
@@ -2174,8 +2183,8 @@
     });
   }
 
-  function getInnerBoundingClientRect(element) {
-    var rect = getBoundingClientRect(element);
+  function getInnerBoundingClientRect(element, strategy) {
+    var rect = getBoundingClientRect(element, false, strategy === 'fixed');
     rect.top = rect.top + element.clientTop;
     rect.left = rect.left + element.clientLeft;
     rect.bottom = rect.top + element.clientHeight;
@@ -2187,8 +2196,8 @@
     return rect;
   }
 
-  function getClientRectFromMixedType(element, clippingParent) {
-    return clippingParent === viewport ? rectToClientRect(getViewportRect(element)) : isElement(clippingParent) ? getInnerBoundingClientRect(clippingParent) : rectToClientRect(getDocumentRect(getDocumentElement(element)));
+  function getClientRectFromMixedType(element, clippingParent, strategy) {
+    return clippingParent === viewport ? rectToClientRect(getViewportRect(element, strategy)) : isElement(clippingParent) ? getInnerBoundingClientRect(clippingParent, strategy) : rectToClientRect(getDocumentRect(getDocumentElement(element)));
   } // A "clipping parent" is an overflowable container with the characteristic of
   // clipping (or hiding) overflowing elements with a position different from
   // `initial`
@@ -2211,18 +2220,18 @@
   // clipping parents
 
 
-  function getClippingRect(element, boundary, rootBoundary) {
+  function getClippingRect(element, boundary, rootBoundary, strategy) {
     var mainClippingParents = boundary === 'clippingParents' ? getClippingParents(element) : [].concat(boundary);
     var clippingParents = [].concat(mainClippingParents, [rootBoundary]);
     var firstClippingParent = clippingParents[0];
     var clippingRect = clippingParents.reduce(function (accRect, clippingParent) {
-      var rect = getClientRectFromMixedType(element, clippingParent);
+      var rect = getClientRectFromMixedType(element, clippingParent, strategy);
       accRect.top = max(rect.top, accRect.top);
       accRect.right = min(rect.right, accRect.right);
       accRect.bottom = min(rect.bottom, accRect.bottom);
       accRect.left = max(rect.left, accRect.left);
       return accRect;
-    }, getClientRectFromMixedType(element, firstClippingParent));
+    }, getClientRectFromMixedType(element, firstClippingParent, strategy));
     clippingRect.width = clippingRect.right - clippingRect.left;
     clippingRect.height = clippingRect.bottom - clippingRect.top;
     clippingRect.x = clippingRect.left;
@@ -2303,6 +2312,8 @@
     var _options = options,
         _options$placement = _options.placement,
         placement = _options$placement === void 0 ? state.placement : _options$placement,
+        _options$strategy = _options.strategy,
+        strategy = _options$strategy === void 0 ? state.strategy : _options$strategy,
         _options$boundary = _options.boundary,
         boundary = _options$boundary === void 0 ? clippingParents : _options$boundary,
         _options$rootBoundary = _options.rootBoundary,
@@ -2317,7 +2328,7 @@
     var altContext = elementContext === popper ? reference : popper;
     var popperRect = state.rects.popper;
     var element = state.elements[altBoundary ? altContext : elementContext];
-    var clippingClientRect = getClippingRect(isElement(element) ? element : element.contextElement || getDocumentElement(state.elements.popper), boundary, rootBoundary);
+    var clippingClientRect = getClippingRect(isElement(element) ? element : element.contextElement || getDocumentElement(state.elements.popper), boundary, rootBoundary, strategy);
     var referenceClientRect = getBoundingClientRect(state.elements.reference);
     var popperOffsets = computeOffsets({
       reference: referenceClientRect,
@@ -2831,7 +2842,7 @@
     var isOffsetParentAnElement = isHTMLElement(offsetParent);
     var offsetParentIsScaled = isHTMLElement(offsetParent) && isElementScaled(offsetParent);
     var documentElement = getDocumentElement(offsetParent);
-    var rect = getBoundingClientRect(elementOrVirtualElement, offsetParentIsScaled);
+    var rect = getBoundingClientRect(elementOrVirtualElement, offsetParentIsScaled, isFixed);
     var scroll = {
       scrollLeft: 0,
       scrollTop: 0
@@ -3185,7 +3196,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): dropdown.js
+   * Bootstrap (v5.2.2): dropdown.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -3193,31 +3204,31 @@
    * Constants
    */
 
-  const NAME$4 = 'dropdown';
-  const DATA_KEY$3 = 'bs.dropdown';
-  const EVENT_KEY$3 = `.${DATA_KEY$3}`;
-  const DATA_API_KEY$1 = '.data-api';
-  const ESCAPE_KEY$1 = 'Escape';
+  const NAME$5 = 'dropdown';
+  const DATA_KEY$4 = 'bs.dropdown';
+  const EVENT_KEY$4 = `.${DATA_KEY$4}`;
+  const DATA_API_KEY$2 = '.data-api';
+  const ESCAPE_KEY$2 = 'Escape';
   const TAB_KEY$1 = 'Tab';
   const ARROW_UP_KEY = 'ArrowUp';
   const ARROW_DOWN_KEY = 'ArrowDown';
   const RIGHT_MOUSE_BUTTON = 2; // MouseEvent.button value for the secondary button, usually the right button
 
-  const EVENT_HIDE$2 = `hide${EVENT_KEY$3}`;
-  const EVENT_HIDDEN$2 = `hidden${EVENT_KEY$3}`;
-  const EVENT_SHOW$2 = `show${EVENT_KEY$3}`;
-  const EVENT_SHOWN$2 = `shown${EVENT_KEY$3}`;
-  const EVENT_CLICK_DATA_API$1 = `click${EVENT_KEY$3}${DATA_API_KEY$1}`;
-  const EVENT_KEYDOWN_DATA_API = `keydown${EVENT_KEY$3}${DATA_API_KEY$1}`;
-  const EVENT_KEYUP_DATA_API = `keyup${EVENT_KEY$3}${DATA_API_KEY$1}`;
-  const CLASS_NAME_SHOW$3 = 'show';
+  const EVENT_HIDE$3 = `hide${EVENT_KEY$4}`;
+  const EVENT_HIDDEN$3 = `hidden${EVENT_KEY$4}`;
+  const EVENT_SHOW$3 = `show${EVENT_KEY$4}`;
+  const EVENT_SHOWN$3 = `shown${EVENT_KEY$4}`;
+  const EVENT_CLICK_DATA_API$2 = `click${EVENT_KEY$4}${DATA_API_KEY$2}`;
+  const EVENT_KEYDOWN_DATA_API = `keydown${EVENT_KEY$4}${DATA_API_KEY$2}`;
+  const EVENT_KEYUP_DATA_API = `keyup${EVENT_KEY$4}${DATA_API_KEY$2}`;
+  const CLASS_NAME_SHOW$4 = 'show';
   const CLASS_NAME_DROPUP = 'dropup';
   const CLASS_NAME_DROPEND = 'dropend';
   const CLASS_NAME_DROPSTART = 'dropstart';
   const CLASS_NAME_DROPUP_CENTER = 'dropup-center';
   const CLASS_NAME_DROPDOWN_CENTER = 'dropdown-center';
-  const SELECTOR_DATA_TOGGLE$1 = '[data-bs-toggle="dropdown"]:not(.disabled):not(:disabled)';
-  const SELECTOR_DATA_TOGGLE_SHOWN = `${SELECTOR_DATA_TOGGLE$1}.${CLASS_NAME_SHOW$3}`;
+  const SELECTOR_DATA_TOGGLE$2 = '[data-bs-toggle="dropdown"]:not(.disabled):not(:disabled)';
+  const SELECTOR_DATA_TOGGLE_SHOWN = `${SELECTOR_DATA_TOGGLE$2}.${CLASS_NAME_SHOW$4}`;
   const SELECTOR_MENU = '.dropdown-menu';
   const SELECTOR_NAVBAR = '.navbar';
   const SELECTOR_NAVBAR_NAV = '.navbar-nav';
@@ -3230,7 +3241,7 @@
   const PLACEMENT_LEFT = isRTL() ? 'right-start' : 'left-start';
   const PLACEMENT_TOPCENTER = 'top';
   const PLACEMENT_BOTTOMCENTER = 'bottom';
-  const Default$4 = {
+  const Default$5 = {
     autoClose: true,
     boundary: 'clippingParents',
     display: 'dynamic',
@@ -3238,7 +3249,7 @@
     popperConfig: null,
     reference: 'toggle'
   };
-  const DefaultType$4 = {
+  const DefaultType$5 = {
     autoClose: '(boolean|string)',
     boundary: '(string|element)',
     display: 'string',
@@ -3255,22 +3266,23 @@
       super(element, config);
       this._popper = null;
       this._parent = this._element.parentNode; // dropdown wrapper
+      // todo: v6 revert #37011 & change markup https://getbootstrap.com/docs/5.2/forms/input-group/
 
-      this._menu = SelectorEngine.findOne(SELECTOR_MENU, this._parent);
+      this._menu = SelectorEngine.next(this._element, SELECTOR_MENU)[0] || SelectorEngine.prev(this._element, SELECTOR_MENU)[0] || SelectorEngine.findOne(SELECTOR_MENU, this._parent);
       this._inNavbar = this._detectNavbar();
     } // Getters
 
 
     static get Default() {
-      return Default$4;
+      return Default$5;
     }
 
     static get DefaultType() {
-      return DefaultType$4;
+      return DefaultType$5;
     }
 
     static get NAME() {
-      return NAME$4;
+      return NAME$5;
     } // Public
 
 
@@ -3286,7 +3298,7 @@
       const relatedTarget = {
         relatedTarget: this._element
       };
-      const showEvent = EventHandler.trigger(this._element, EVENT_SHOW$2, relatedTarget);
+      const showEvent = EventHandler.trigger(this._element, EVENT_SHOW$3, relatedTarget);
 
       if (showEvent.defaultPrevented) {
         return;
@@ -3308,11 +3320,11 @@
 
       this._element.setAttribute('aria-expanded', true);
 
-      this._menu.classList.add(CLASS_NAME_SHOW$3);
+      this._menu.classList.add(CLASS_NAME_SHOW$4);
 
-      this._element.classList.add(CLASS_NAME_SHOW$3);
+      this._element.classList.add(CLASS_NAME_SHOW$4);
 
-      EventHandler.trigger(this._element, EVENT_SHOWN$2, relatedTarget);
+      EventHandler.trigger(this._element, EVENT_SHOWN$3, relatedTarget);
     }
 
     hide() {
@@ -3345,7 +3357,7 @@
 
 
     _completeHide(relatedTarget) {
-      const hideEvent = EventHandler.trigger(this._element, EVENT_HIDE$2, relatedTarget);
+      const hideEvent = EventHandler.trigger(this._element, EVENT_HIDE$3, relatedTarget);
 
       if (hideEvent.defaultPrevented) {
         return;
@@ -3363,14 +3375,14 @@
         this._popper.destroy();
       }
 
-      this._menu.classList.remove(CLASS_NAME_SHOW$3);
+      this._menu.classList.remove(CLASS_NAME_SHOW$4);
 
-      this._element.classList.remove(CLASS_NAME_SHOW$3);
+      this._element.classList.remove(CLASS_NAME_SHOW$4);
 
       this._element.setAttribute('aria-expanded', 'false');
 
       Manipulator.removeDataAttribute(this._menu, 'popper');
-      EventHandler.trigger(this._element, EVENT_HIDDEN$2, relatedTarget);
+      EventHandler.trigger(this._element, EVENT_HIDDEN$3, relatedTarget);
     }
 
     _getConfig(config) {
@@ -3378,7 +3390,7 @@
 
       if (typeof config.reference === 'object' && !isElement$1(config.reference) && typeof config.reference.getBoundingClientRect !== 'function') {
         // Popper virtual elements require a getBoundingClientRect method
-        throw new TypeError(`${NAME$4.toUpperCase()}: Option "reference" provided type "object" without a required "getBoundingClientRect" method.`);
+        throw new TypeError(`${NAME$5.toUpperCase()}: Option "reference" provided type "object" without a required "getBoundingClientRect" method.`);
       }
 
       return config;
@@ -3405,7 +3417,7 @@
     }
 
     _isShown() {
-      return this._menu.classList.contains(CLASS_NAME_SHOW$3);
+      return this._menu.classList.contains(CLASS_NAME_SHOW$4);
     }
 
     _getPlacement() {
@@ -3561,7 +3573,7 @@
       // If not an UP | DOWN | ESCAPE key => not a dropdown command
       // If input/textarea && if key is other than ESCAPE => not a dropdown command
       const isInput = /input|textarea/i.test(event.target.tagName);
-      const isEscapeEvent = event.key === ESCAPE_KEY$1;
+      const isEscapeEvent = event.key === ESCAPE_KEY$2;
       const isUpOrDownEvent = [ARROW_UP_KEY, ARROW_DOWN_KEY].includes(event.key);
 
       if (!isUpOrDownEvent && !isEscapeEvent) {
@@ -3572,8 +3584,9 @@
         return;
       }
 
-      event.preventDefault();
-      const getToggleButton = SelectorEngine.findOne(SELECTOR_DATA_TOGGLE$1, event.delegateTarget.parentNode);
+      event.preventDefault(); // todo: v6 revert #37011 & change markup https://getbootstrap.com/docs/5.2/forms/input-group/
+
+      const getToggleButton = this.matches(SELECTOR_DATA_TOGGLE$2) ? this : SelectorEngine.prev(this, SELECTOR_DATA_TOGGLE$2)[0] || SelectorEngine.next(this, SELECTOR_DATA_TOGGLE$2)[0] || SelectorEngine.findOne(SELECTOR_DATA_TOGGLE$2, event.delegateTarget.parentNode);
       const instance = Dropdown.getOrCreateInstance(getToggleButton);
 
       if (isUpOrDownEvent) {
@@ -3599,11 +3612,11 @@
    */
 
 
-  EventHandler.on(document, EVENT_KEYDOWN_DATA_API, SELECTOR_DATA_TOGGLE$1, Dropdown.dataApiKeydownHandler);
+  EventHandler.on(document, EVENT_KEYDOWN_DATA_API, SELECTOR_DATA_TOGGLE$2, Dropdown.dataApiKeydownHandler);
   EventHandler.on(document, EVENT_KEYDOWN_DATA_API, SELECTOR_MENU, Dropdown.dataApiKeydownHandler);
-  EventHandler.on(document, EVENT_CLICK_DATA_API$1, Dropdown.clearMenus);
+  EventHandler.on(document, EVENT_CLICK_DATA_API$2, Dropdown.clearMenus);
   EventHandler.on(document, EVENT_KEYUP_DATA_API, Dropdown.clearMenus);
-  EventHandler.on(document, EVENT_CLICK_DATA_API$1, SELECTOR_DATA_TOGGLE$1, function (event) {
+  EventHandler.on(document, EVENT_CLICK_DATA_API$2, SELECTOR_DATA_TOGGLE$2, function (event) {
     event.preventDefault();
     Dropdown.getOrCreateInstance(this).toggle();
   });
@@ -3615,7 +3628,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): util/scrollBar.js
+   * Bootstrap (v5.2.2): util/scrollBar.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -3734,7 +3747,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): util/backdrop.js
+   * Bootstrap (v5.2.2): util/backdrop.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -3742,11 +3755,11 @@
    * Constants
    */
 
-  const NAME$3 = 'backdrop';
+  const NAME$4 = 'backdrop';
   const CLASS_NAME_FADE$2 = 'fade';
-  const CLASS_NAME_SHOW$2 = 'show';
-  const EVENT_MOUSEDOWN = `mousedown.bs.${NAME$3}`;
-  const Default$3 = {
+  const CLASS_NAME_SHOW$3 = 'show';
+  const EVENT_MOUSEDOWN = `mousedown.bs.${NAME$4}`;
+  const Default$4 = {
     className: 'modal-backdrop',
     clickCallback: null,
     isAnimated: false,
@@ -3755,7 +3768,7 @@
     rootElement: 'body' // give the choice to place backdrop under different elements
 
   };
-  const DefaultType$3 = {
+  const DefaultType$4 = {
     className: 'string',
     clickCallback: '(function|null)',
     isAnimated: 'boolean',
@@ -3776,15 +3789,15 @@
 
 
     static get Default() {
-      return Default$3;
+      return Default$4;
     }
 
     static get DefaultType() {
-      return DefaultType$3;
+      return DefaultType$4;
     }
 
     static get NAME() {
-      return NAME$3;
+      return NAME$4;
     } // Public
 
 
@@ -3802,7 +3815,7 @@
         reflow(element);
       }
 
-      element.classList.add(CLASS_NAME_SHOW$2);
+      element.classList.add(CLASS_NAME_SHOW$3);
 
       this._emulateAnimation(() => {
         execute(callback);
@@ -3815,7 +3828,7 @@
         return;
       }
 
-      this._getElement().classList.remove(CLASS_NAME_SHOW$2);
+      this._getElement().classList.remove(CLASS_NAME_SHOW$3);
 
       this._emulateAnimation(() => {
         this.dispose();
@@ -3880,7 +3893,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): util/focustrap.js
+   * Bootstrap (v5.2.2): util/focustrap.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -3888,20 +3901,20 @@
    * Constants
    */
 
-  const NAME$2 = 'focustrap';
-  const DATA_KEY$2 = 'bs.focustrap';
-  const EVENT_KEY$2 = `.${DATA_KEY$2}`;
-  const EVENT_FOCUSIN$1 = `focusin${EVENT_KEY$2}`;
-  const EVENT_KEYDOWN_TAB = `keydown.tab${EVENT_KEY$2}`;
+  const NAME$3 = 'focustrap';
+  const DATA_KEY$3 = 'bs.focustrap';
+  const EVENT_KEY$3 = `.${DATA_KEY$3}`;
+  const EVENT_FOCUSIN$1 = `focusin${EVENT_KEY$3}`;
+  const EVENT_KEYDOWN_TAB = `keydown.tab${EVENT_KEY$3}`;
   const TAB_KEY = 'Tab';
   const TAB_NAV_FORWARD = 'forward';
   const TAB_NAV_BACKWARD = 'backward';
-  const Default$2 = {
+  const Default$3 = {
     autofocus: true,
     trapElement: null // The element to trap focus inside of
 
   };
-  const DefaultType$2 = {
+  const DefaultType$3 = {
     autofocus: 'boolean',
     trapElement: 'element'
   };
@@ -3919,15 +3932,15 @@
 
 
     static get Default() {
-      return Default$2;
+      return Default$3;
     }
 
     static get DefaultType() {
-      return DefaultType$2;
+      return DefaultType$3;
     }
 
     static get NAME() {
-      return NAME$2;
+      return NAME$3;
     } // Public
 
 
@@ -3940,7 +3953,7 @@
         this._config.trapElement.focus();
       }
 
-      EventHandler.off(document, EVENT_KEY$2); // guard against infinite focus loop
+      EventHandler.off(document, EVENT_KEY$3); // guard against infinite focus loop
 
       EventHandler.on(document, EVENT_FOCUSIN$1, event => this._handleFocusin(event));
       EventHandler.on(document, EVENT_KEYDOWN_TAB, event => this._handleKeydown(event));
@@ -3953,7 +3966,7 @@
       }
 
       this._isActive = false;
-      EventHandler.off(document, EVENT_KEY$2);
+      EventHandler.off(document, EVENT_KEY$3);
     } // Private
 
 
@@ -3989,7 +4002,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): modal.js
+   * Bootstrap (v5.2.2): modal.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -3997,34 +4010,35 @@
    * Constants
    */
 
-  const NAME$1 = 'modal';
-  const DATA_KEY$1 = 'bs.modal';
-  const EVENT_KEY$1 = `.${DATA_KEY$1}`;
-  const DATA_API_KEY = '.data-api';
-  const ESCAPE_KEY = 'Escape';
-  const EVENT_HIDE$1 = `hide${EVENT_KEY$1}`;
-  const EVENT_HIDE_PREVENTED = `hidePrevented${EVENT_KEY$1}`;
-  const EVENT_HIDDEN$1 = `hidden${EVENT_KEY$1}`;
-  const EVENT_SHOW$1 = `show${EVENT_KEY$1}`;
-  const EVENT_SHOWN$1 = `shown${EVENT_KEY$1}`;
-  const EVENT_RESIZE = `resize${EVENT_KEY$1}`;
-  const EVENT_MOUSEDOWN_DISMISS = `mousedown.dismiss${EVENT_KEY$1}`;
-  const EVENT_KEYDOWN_DISMISS = `keydown.dismiss${EVENT_KEY$1}`;
-  const EVENT_CLICK_DATA_API = `click${EVENT_KEY$1}${DATA_API_KEY}`;
+  const NAME$2 = 'modal';
+  const DATA_KEY$2 = 'bs.modal';
+  const EVENT_KEY$2 = `.${DATA_KEY$2}`;
+  const DATA_API_KEY$1 = '.data-api';
+  const ESCAPE_KEY$1 = 'Escape';
+  const EVENT_HIDE$2 = `hide${EVENT_KEY$2}`;
+  const EVENT_HIDE_PREVENTED$1 = `hidePrevented${EVENT_KEY$2}`;
+  const EVENT_HIDDEN$2 = `hidden${EVENT_KEY$2}`;
+  const EVENT_SHOW$2 = `show${EVENT_KEY$2}`;
+  const EVENT_SHOWN$2 = `shown${EVENT_KEY$2}`;
+  const EVENT_RESIZE$1 = `resize${EVENT_KEY$2}`;
+  const EVENT_CLICK_DISMISS = `click.dismiss${EVENT_KEY$2}`;
+  const EVENT_MOUSEDOWN_DISMISS = `mousedown.dismiss${EVENT_KEY$2}`;
+  const EVENT_KEYDOWN_DISMISS$1 = `keydown.dismiss${EVENT_KEY$2}`;
+  const EVENT_CLICK_DATA_API$1 = `click${EVENT_KEY$2}${DATA_API_KEY$1}`;
   const CLASS_NAME_OPEN = 'modal-open';
   const CLASS_NAME_FADE$1 = 'fade';
-  const CLASS_NAME_SHOW$1 = 'show';
+  const CLASS_NAME_SHOW$2 = 'show';
   const CLASS_NAME_STATIC = 'modal-static';
-  const OPEN_SELECTOR = '.modal.show';
+  const OPEN_SELECTOR$1 = '.modal.show';
   const SELECTOR_DIALOG = '.modal-dialog';
   const SELECTOR_MODAL_BODY = '.modal-body';
-  const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="modal"]';
-  const Default$1 = {
+  const SELECTOR_DATA_TOGGLE$1 = '[data-bs-toggle="modal"]';
+  const Default$2 = {
     backdrop: true,
     focus: true,
     keyboard: true
   };
-  const DefaultType$1 = {
+  const DefaultType$2 = {
     backdrop: '(boolean|string)',
     focus: 'boolean',
     keyboard: 'boolean'
@@ -4048,15 +4062,15 @@
 
 
     static get Default() {
-      return Default$1;
+      return Default$2;
     }
 
     static get DefaultType() {
-      return DefaultType$1;
+      return DefaultType$2;
     }
 
     static get NAME() {
-      return NAME$1;
+      return NAME$2;
     } // Public
 
 
@@ -4069,7 +4083,7 @@
         return;
       }
 
-      const showEvent = EventHandler.trigger(this._element, EVENT_SHOW$1, {
+      const showEvent = EventHandler.trigger(this._element, EVENT_SHOW$2, {
         relatedTarget
       });
 
@@ -4094,7 +4108,7 @@
         return;
       }
 
-      const hideEvent = EventHandler.trigger(this._element, EVENT_HIDE$1);
+      const hideEvent = EventHandler.trigger(this._element, EVENT_HIDE$2);
 
       if (hideEvent.defaultPrevented) {
         return;
@@ -4105,14 +4119,14 @@
 
       this._focustrap.deactivate();
 
-      this._element.classList.remove(CLASS_NAME_SHOW$1);
+      this._element.classList.remove(CLASS_NAME_SHOW$2);
 
       this._queueCallback(() => this._hideModal(), this._element, this._isAnimated());
     }
 
     dispose() {
       for (const htmlElement of [window, this._dialog]) {
-        EventHandler.off(htmlElement, EVENT_KEY$1);
+        EventHandler.off(htmlElement, EVENT_KEY$2);
       }
 
       this._backdrop.dispose();
@@ -4164,7 +4178,7 @@
 
       reflow(this._element);
 
-      this._element.classList.add(CLASS_NAME_SHOW$1);
+      this._element.classList.add(CLASS_NAME_SHOW$2);
 
       const transitionComplete = () => {
         if (this._config.focus) {
@@ -4172,7 +4186,7 @@
         }
 
         this._isTransitioning = false;
-        EventHandler.trigger(this._element, EVENT_SHOWN$1, {
+        EventHandler.trigger(this._element, EVENT_SHOWN$2, {
           relatedTarget
         });
       };
@@ -4181,8 +4195,8 @@
     }
 
     _addEventListeners() {
-      EventHandler.on(this._element, EVENT_KEYDOWN_DISMISS, event => {
-        if (event.key !== ESCAPE_KEY) {
+      EventHandler.on(this._element, EVENT_KEYDOWN_DISMISS$1, event => {
+        if (event.key !== ESCAPE_KEY$1) {
           return;
         }
 
@@ -4194,26 +4208,28 @@
 
         this._triggerBackdropTransition();
       });
-      EventHandler.on(window, EVENT_RESIZE, () => {
+      EventHandler.on(window, EVENT_RESIZE$1, () => {
         if (this._isShown && !this._isTransitioning) {
           this._adjustDialog();
         }
       });
       EventHandler.on(this._element, EVENT_MOUSEDOWN_DISMISS, event => {
-        if (event.target !== event.currentTarget) {
-          // click is inside modal-dialog
-          return;
-        }
+        // a bad trick to segregate clicks that may start inside dialog but end outside, and avoid listen to scrollbar clicks
+        EventHandler.one(this._element, EVENT_CLICK_DISMISS, event2 => {
+          if (this._element !== event.target || this._element !== event2.target) {
+            return;
+          }
 
-        if (this._config.backdrop === 'static') {
-          this._triggerBackdropTransition();
+          if (this._config.backdrop === 'static') {
+            this._triggerBackdropTransition();
 
-          return;
-        }
+            return;
+          }
 
-        if (this._config.backdrop) {
-          this.hide();
-        }
+          if (this._config.backdrop) {
+            this.hide();
+          }
+        });
       });
     }
 
@@ -4235,7 +4251,7 @@
 
         this._scrollBar.reset();
 
-        EventHandler.trigger(this._element, EVENT_HIDDEN$1);
+        EventHandler.trigger(this._element, EVENT_HIDDEN$2);
       });
     }
 
@@ -4244,7 +4260,7 @@
     }
 
     _triggerBackdropTransition() {
-      const hideEvent = EventHandler.trigger(this._element, EVENT_HIDE_PREVENTED);
+      const hideEvent = EventHandler.trigger(this._element, EVENT_HIDE_PREVENTED$1);
 
       if (hideEvent.defaultPrevented) {
         return;
@@ -4324,27 +4340,27 @@
    */
 
 
-  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
+  EventHandler.on(document, EVENT_CLICK_DATA_API$1, SELECTOR_DATA_TOGGLE$1, function (event) {
     const target = getElementFromSelector(this);
 
     if (['A', 'AREA'].includes(this.tagName)) {
       event.preventDefault();
     }
 
-    EventHandler.one(target, EVENT_SHOW$1, showEvent => {
+    EventHandler.one(target, EVENT_SHOW$2, showEvent => {
       if (showEvent.defaultPrevented) {
         // only register focus restorer if modal will actually get shown
         return;
       }
 
-      EventHandler.one(target, EVENT_HIDDEN$1, () => {
+      EventHandler.one(target, EVENT_HIDDEN$2, () => {
         if (isVisible(this)) {
           this.focus();
         }
       });
     }); // avoid conflict when clicking modal toggler while another one is open
 
-    const alreadyOpen = SelectorEngine.findOne(OPEN_SELECTOR);
+    const alreadyOpen = SelectorEngine.findOne(OPEN_SELECTOR$1);
 
     if (alreadyOpen) {
       Modal.getInstance(alreadyOpen).hide();
@@ -4362,7 +4378,281 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): toast.js
+   * Bootstrap (v5.2.2): offcanvas.js
+   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+   * --------------------------------------------------------------------------
+   */
+  /**
+   * Constants
+   */
+
+  const NAME$1 = 'offcanvas';
+  const DATA_KEY$1 = 'bs.offcanvas';
+  const EVENT_KEY$1 = `.${DATA_KEY$1}`;
+  const DATA_API_KEY = '.data-api';
+  const EVENT_LOAD_DATA_API = `load${EVENT_KEY$1}${DATA_API_KEY}`;
+  const ESCAPE_KEY = 'Escape';
+  const CLASS_NAME_SHOW$1 = 'show';
+  const CLASS_NAME_SHOWING$1 = 'showing';
+  const CLASS_NAME_HIDING = 'hiding';
+  const CLASS_NAME_BACKDROP = 'offcanvas-backdrop';
+  const OPEN_SELECTOR = '.offcanvas.show';
+  const EVENT_SHOW$1 = `show${EVENT_KEY$1}`;
+  const EVENT_SHOWN$1 = `shown${EVENT_KEY$1}`;
+  const EVENT_HIDE$1 = `hide${EVENT_KEY$1}`;
+  const EVENT_HIDE_PREVENTED = `hidePrevented${EVENT_KEY$1}`;
+  const EVENT_HIDDEN$1 = `hidden${EVENT_KEY$1}`;
+  const EVENT_RESIZE = `resize${EVENT_KEY$1}`;
+  const EVENT_CLICK_DATA_API = `click${EVENT_KEY$1}${DATA_API_KEY}`;
+  const EVENT_KEYDOWN_DISMISS = `keydown.dismiss${EVENT_KEY$1}`;
+  const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="offcanvas"]';
+  const Default$1 = {
+    backdrop: true,
+    keyboard: true,
+    scroll: false
+  };
+  const DefaultType$1 = {
+    backdrop: '(boolean|string)',
+    keyboard: 'boolean',
+    scroll: 'boolean'
+  };
+  /**
+   * Class definition
+   */
+
+  class Offcanvas extends BaseComponent {
+    constructor(element, config) {
+      super(element, config);
+      this._isShown = false;
+      this._backdrop = this._initializeBackDrop();
+      this._focustrap = this._initializeFocusTrap();
+
+      this._addEventListeners();
+    } // Getters
+
+
+    static get Default() {
+      return Default$1;
+    }
+
+    static get DefaultType() {
+      return DefaultType$1;
+    }
+
+    static get NAME() {
+      return NAME$1;
+    } // Public
+
+
+    toggle(relatedTarget) {
+      return this._isShown ? this.hide() : this.show(relatedTarget);
+    }
+
+    show(relatedTarget) {
+      if (this._isShown) {
+        return;
+      }
+
+      const showEvent = EventHandler.trigger(this._element, EVENT_SHOW$1, {
+        relatedTarget
+      });
+
+      if (showEvent.defaultPrevented) {
+        return;
+      }
+
+      this._isShown = true;
+
+      this._backdrop.show();
+
+      if (!this._config.scroll) {
+        new ScrollBarHelper().hide();
+      }
+
+      this._element.setAttribute('aria-modal', true);
+
+      this._element.setAttribute('role', 'dialog');
+
+      this._element.classList.add(CLASS_NAME_SHOWING$1);
+
+      const completeCallBack = () => {
+        if (!this._config.scroll || this._config.backdrop) {
+          this._focustrap.activate();
+        }
+
+        this._element.classList.add(CLASS_NAME_SHOW$1);
+
+        this._element.classList.remove(CLASS_NAME_SHOWING$1);
+
+        EventHandler.trigger(this._element, EVENT_SHOWN$1, {
+          relatedTarget
+        });
+      };
+
+      this._queueCallback(completeCallBack, this._element, true);
+    }
+
+    hide() {
+      if (!this._isShown) {
+        return;
+      }
+
+      const hideEvent = EventHandler.trigger(this._element, EVENT_HIDE$1);
+
+      if (hideEvent.defaultPrevented) {
+        return;
+      }
+
+      this._focustrap.deactivate();
+
+      this._element.blur();
+
+      this._isShown = false;
+
+      this._element.classList.add(CLASS_NAME_HIDING);
+
+      this._backdrop.hide();
+
+      const completeCallback = () => {
+        this._element.classList.remove(CLASS_NAME_SHOW$1, CLASS_NAME_HIDING);
+
+        this._element.removeAttribute('aria-modal');
+
+        this._element.removeAttribute('role');
+
+        if (!this._config.scroll) {
+          new ScrollBarHelper().reset();
+        }
+
+        EventHandler.trigger(this._element, EVENT_HIDDEN$1);
+      };
+
+      this._queueCallback(completeCallback, this._element, true);
+    }
+
+    dispose() {
+      this._backdrop.dispose();
+
+      this._focustrap.deactivate();
+
+      super.dispose();
+    } // Private
+
+
+    _initializeBackDrop() {
+      const clickCallback = () => {
+        if (this._config.backdrop === 'static') {
+          EventHandler.trigger(this._element, EVENT_HIDE_PREVENTED);
+          return;
+        }
+
+        this.hide();
+      }; // 'static' option will be translated to true, and booleans will keep their value
+
+
+      const isVisible = Boolean(this._config.backdrop);
+      return new Backdrop({
+        className: CLASS_NAME_BACKDROP,
+        isVisible,
+        isAnimated: true,
+        rootElement: this._element.parentNode,
+        clickCallback: isVisible ? clickCallback : null
+      });
+    }
+
+    _initializeFocusTrap() {
+      return new FocusTrap({
+        trapElement: this._element
+      });
+    }
+
+    _addEventListeners() {
+      EventHandler.on(this._element, EVENT_KEYDOWN_DISMISS, event => {
+        if (event.key !== ESCAPE_KEY) {
+          return;
+        }
+
+        if (!this._config.keyboard) {
+          EventHandler.trigger(this._element, EVENT_HIDE_PREVENTED);
+          return;
+        }
+
+        this.hide();
+      });
+    } // Static
+
+
+    static jQueryInterface(config) {
+      return this.each(function () {
+        const data = Offcanvas.getOrCreateInstance(this, config);
+
+        if (typeof config !== 'string') {
+          return;
+        }
+
+        if (data[config] === undefined || config.startsWith('_') || config === 'constructor') {
+          throw new TypeError(`No method named "${config}"`);
+        }
+
+        data[config](this);
+      });
+    }
+
+  }
+  /**
+   * Data API implementation
+   */
+
+
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
+    const target = getElementFromSelector(this);
+
+    if (['A', 'AREA'].includes(this.tagName)) {
+      event.preventDefault();
+    }
+
+    if (isDisabled(this)) {
+      return;
+    }
+
+    EventHandler.one(target, EVENT_HIDDEN$1, () => {
+      // focus on trigger when it is closed
+      if (isVisible(this)) {
+        this.focus();
+      }
+    }); // avoid conflict when clicking a toggler of an offcanvas, while another is open
+
+    const alreadyOpen = SelectorEngine.findOne(OPEN_SELECTOR);
+
+    if (alreadyOpen && alreadyOpen !== target) {
+      Offcanvas.getInstance(alreadyOpen).hide();
+    }
+
+    const data = Offcanvas.getOrCreateInstance(target);
+    data.toggle(this);
+  });
+  EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
+    for (const selector of SelectorEngine.find(OPEN_SELECTOR)) {
+      Offcanvas.getOrCreateInstance(selector).show();
+    }
+  });
+  EventHandler.on(window, EVENT_RESIZE, () => {
+    for (const element of SelectorEngine.find('[aria-modal][class*=show][class*=offcanvas-]')) {
+      if (getComputedStyle(element).position !== 'fixed') {
+        Offcanvas.getOrCreateInstance(element).hide();
+      }
+    }
+  });
+  enableDismissTrigger(Offcanvas);
+  /**
+   * jQuery
+   */
+
+  defineJQueryPlugin(Offcanvas);
+
+  /**
+   * --------------------------------------------------------------------------
+   * Bootstrap (v5.2.2): toast.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4513,13 +4803,17 @@
       switch (event.type) {
         case 'mouseover':
         case 'mouseout':
-          this._hasMouseInteraction = isInteracting;
-          break;
+          {
+            this._hasMouseInteraction = isInteracting;
+            break;
+          }
 
         case 'focusin':
         case 'focusout':
-          this._hasKeyboardInteraction = isInteracting;
-          break;
+          {
+            this._hasKeyboardInteraction = isInteracting;
+            break;
+          }
       }
 
       if (isInteracting) {
@@ -4579,7 +4873,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.0): index.umd.js
+   * Bootstrap (v5.2.2): index.umd.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4587,15 +4881,15 @@
   const index_umd = {
     Alert,
     Button,
-    // Carousel,
+    //Carousel,
     Collapse,
     Dropdown,
     Modal,
-    // Offcanvas,
-    // Popover,
-    // ScrollSpy,
-    // Tab,
-    Toast // Tooltip
+    Offcanvas,
+    //Popover,
+    //ScrollSpy,
+    //Tab,
+    Toast //Tooltip
 
   };
 
