@@ -2,8 +2,8 @@
 	"name": "pkg_assetghsvs",
 	"nameReal": "pkg_file_assetghsvs",
 	"filename": "assetghsvs",
-	"version": "2022.10.04",
-	"versionCompare": "2022.09.30",
+	"version": "2022.12.19",
+	"versionCompare": "2022.10.04",
 	"update": {
 		"type": "package",
 		"folder": "",

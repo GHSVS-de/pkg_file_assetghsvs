@@ -12,11 +12,8 @@ DE: See https://ghsvs.de/programmierer-schnipsel/sonstige/352-npm-mehrere-versio
 - Get from https://github.com/twbs/bootstrap correct version:
   - Select in tags dropdown the wished release.
   - Download ZIP and unzip into `/mnt/z/git-kram/bootstrap/`.
-- Open Github Desktop and let it do it's work ("refresh with new files").
-- `cd /mnt/z/git-kram/bootstrap/`
-- `unlink package-lock.json`
-- `rm -r dist/`
-- `rm -r js/dist/`
+- Open Github Desktop and let it do it's local work ("refresh with new files").
+- `cd /mnt/z/git-kram/bootstrap/;unlink package-lock.json;rm -r dist/;rm -r js/dist/`
 - `npm install`
 - Change file `git-kram/bootstrap/js/index.umd.js`
 - Comment out unwanted parts. Each twice.
@@ -52,10 +49,10 @@ export default {
 ```
 
 - Compile: `npm run js`
+  - Or: `npm run dist`
 
 ### !!!Don't forget then!!!
-- `mkdir _ghsvsBootstrapBundleVersion_`.
-- `cp js/index.umd.js _ghsvsBootstrapBundleVersion_`
+- `mkdir _ghsvsBootstrapBundleVersion_;cp js/index.umd.js _ghsvsBootstrapBundleVersion_`
 - Copy following from `git-kram/bootstrap/dist/js` to `src\packages\file_assetghsvs\js\bootstrap\xy\-_custom_-` (`xy` is the BS version).
   - `/_ghsvsBootstrapBundleVersion_/` (I don't know if still needed in `tpl_bs4ghsvs` but good as reference what is included in bundle.js).
   - `bootstrap.bundle.js`
