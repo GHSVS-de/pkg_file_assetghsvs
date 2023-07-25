@@ -4,7 +4,7 @@ Joomla file package. Different versions of asset files that I often need. For ex
 
 DE: See https://ghsvs.de/programmierer-schnipsel/sonstige/352-npm-mehrere-versionen-des-selben-pakets-in-node-modules
 
-## New Bootstrap 5 release? Special step (1)!!!!! Build reduced `bootstrap.bundle` JS!!!!!!
+## OPTIONAL: New Bootstrap 5 release? Special step (1)!!!!! Build reduced `bootstrap.bundle` JS!!!!!!
 
 - Delete everything in `/mnt/z/git-kram/bootstrap/`
   - but don't delete `./.git`!
