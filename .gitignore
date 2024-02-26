@@ -17,6 +17,6 @@ dist copy/
 !/dist/**
 src/vendor/bin/pscss
 src/vendor/scssphp/scssphp/bin/pscss
-/dist/*.xml
-/dist/*.txt
+# /dist/*.xml
+# /dist/*.txt
 _composer/vendor
