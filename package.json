@@ -2,9 +2,11 @@
 	"name": "pkg_assetghsvs",
 	"nameReal": "pkg_file_assetghsvs",
 	"filename": "assetghsvs",
-	"version": "2023.11.03",
-	"versionCompare": "2023.07.25",
+	"version": "2024.02.26",
+	"versionCompare": "2023.11.03",
+	"versionSub": "",
 	"update": {
+		"infourl": "https://github.com/GHSVS-de/pkg_file_assetghsvs{{thisRelease}}",
 		"type": "package",
 		"folder": "",
 		"client": "site",
@@ -42,8 +44,8 @@
 		"docsDE": "",
 		"docsEN": "",
 		"lastTests": [
-			"PHP 8.0",
 			"PHP 8.1",
+			"PHP 8.2",
 			"Joomla 3.10",
 			"Joomla 4.4",
 			"Joomla 5.0"
